@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use App::pgps;
+
+# PODNAME: pgps
+# ABSTRACT: PostgreSQL ps
+# VERSION
+
+exit App::pgps->main(@ARGV);
