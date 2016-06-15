@@ -1,2 +1,5 @@
 /App-pgps-*
 /.build
+/fat/fatlib
+/fat/pgps
+/fatlib

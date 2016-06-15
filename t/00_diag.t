@@ -12,9 +12,10 @@ my $post_diag;
 $modules{$_} = $_ for qw(
   DBI
   ExtUtils::MakeMaker
+  Getopt::Long
   Test2::Suite
   Test::More
-  experimental
+  Test::Script
 );
 
 
