@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use App::pgkill;
+
+# PODNAME: pgkill
+# ABSTRACT: PostgreSQL kill
+# VERSION
+
+exit App::pgkill->main(@ARGV);
+
