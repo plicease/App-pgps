@@ -8,6 +8,7 @@ pod_spelling_system:
   stopwords:
     - PostgreSQL
     - pgps
+    - pgkill
     - ps
 
 pod_coverage:
