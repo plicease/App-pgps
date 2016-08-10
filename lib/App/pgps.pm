@@ -37,6 +37,8 @@ sub main
       CASE WHEN state = 'active' THEN query ELSE '' END
     FROM
       pg_stat_activity
+    WHERE
+      pid != pg_backend_pid()
   }});
     
   $sth->execute;
@@ -47,13 +49,20 @@ sub main
     next if $active && $row->[3] eq 'idle';
     push @rows, [@$row];
   }
-
-  say $_ for table(
-    collapse => 1,
-    header   => [qw( pid user address state query )],
-    sanitize => 1,
-    rows     => \@rows,
-  );    
+  
+  if(@rows)
+  {
+    say $_ for table(
+      collapse => 1,
+      header   => [qw( pid user address state query )],
+      sanitize => 1,
+      rows     => \@rows,
+    );
+  }
+  else
+  {
+    say "no matching processes";
+  }
 
   0;    
 }
