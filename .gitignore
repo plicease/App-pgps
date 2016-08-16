@@ -2,4 +2,5 @@
 /.build
 /fat/fatlib
 /fat/pgps
+/fat/pgkill
 /fatlib
