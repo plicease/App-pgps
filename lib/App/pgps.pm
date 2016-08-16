@@ -47,6 +47,7 @@ sub main
   while(my $row = $sth->fetchrow_arrayref)
   {
     next if $active && $row->[3] eq 'idle';
+    next if $active && $row->[3] eq 'idle in transaction';
     push @rows, [@$row];
   }
   
