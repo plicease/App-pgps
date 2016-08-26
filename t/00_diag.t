@@ -10,6 +10,7 @@ my %modules;
 my $post_diag;
 
 $modules{$_} = $_ for qw(
+  DBD::Pg
   DBI
   ExtUtils::MakeMaker
   Getopt::Long
